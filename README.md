@@ -57,7 +57,7 @@ For now, the application can only work for windows systems because of file manag
 3. Go to the assembler folder and run assembler.exe. It will prompt you for the name of your .txt assembly file e.g. "myAssembly.txt". Once it executes successfully, a binary file will be created in the .binary.txt folder titled "myAssembly.binary.txt". 
 4. Go to the simulator folder and run simulator.exe. It will prompt you for the name of the .binary.txt file you would like to simulate. Once you enter the file, wait for execution.
 
-NOTE: testBench assembly programs have been provided in the .txt sub-folder for users who prefer not to write any assembly code. Use the testBenches to try out the functionality. The testBench binary files in the .binary.txt file may also be loaded into the simulator or deleted since they can be regenerated from their source files in the .txt sub-folder.
+NOTE: Test bench assembly programs have been provided in the .txt sub-folder for users who prefer not to write any assembly code. Use the test bench files to try out the functionality. The test bench binary files in the .binary.txt folder may also be loaded into the simulator or deleted since they can be regenerated from their source files in the .txt sub-folder.
 
 ## Shortcomings
 
