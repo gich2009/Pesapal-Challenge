@@ -32,21 +32,21 @@ The simulator logs the register values after every cycle (upon execution of ever
 
 For example, the following program should be able to be run using the simulator:
 
-; a simple counter program.
-li R1 0x00000000
-; end
-li R2 0x0000FFFF
-; memory location of loop start
-li R3 loop
+; a simple counter program.  
+li R1 0x00000000  
+; end  
+li R2 0x0000FFFF  
+; memory location of loop start  
+li R3 loop  
 loop:
-  ; store the contents of R1 at the memory location pointed by R1
-  sw R1 R1
-  ; increment the counter
-  inc R1
-  ; loop if the counter hasn't yet reached the end
-  bne R1 R2 R3
-  ; end program
-  halt
+  ; store the contents of R1 at the location pointed by R1   
+  sw R1 R1  
+  ; increment the counter  
+  inc R1  
+  ; loop if the counter hasn't yet reached the end  
+  bne R1 R2 R3  
+  ; end program  
+  halt  
 
 ## How to setup and use
 
