@@ -64,4 +64,3 @@ While trying to run the .exe files, you may get a dialog box from windows 10 or 
 ## Shortcomings
 
 The exception handlers for the application have not been completed so crashes may occur when unexpected input is given.
-
