@@ -50,7 +50,7 @@ loop:
 
 ## How to setup and use
 
-For now, the application can only work for windows systems because of file management differences with other operating systems. Ironical since I'm writing this on Ubuntu but that's the irony of life
+For now, the application can only work for windows systems because of file management differences with other operating systems. Pretty funny since I'm writing this on Ubuntu but that's the irony of a developer's life!
 
 1. Download the Pesapal folder. 
 2. Write your assembly language code with the instruction set provided in a .txt file and save it in the .txt subfolder of the Pesapal folder. 
