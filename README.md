@@ -30,7 +30,7 @@ The simulator takes the output file of the assembler and executes it. Programs a
 
 The simulator logs the register values after every cycle (upon execution of every instruction).
 
-For example, the following program should be able to be run using the simulator:
+For example, the following program should be able to be run using the simulator:  
 ; load to R1  
 li R1 0x00000000  
 ; load to R2  
