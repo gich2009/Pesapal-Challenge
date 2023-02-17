@@ -31,7 +31,7 @@ The simulator takes the output file of the assembler and executes it. Programs a
 The simulator logs the register values after every cycle (upon execution of every instruction).
 
 For example, the following program should be able to be run using the simulator:  
-; a simple counter program.  
+'''; a simple counter program.  
 li R1 0x00000000  
 ; end  
 li R2 0x0000FFFF  
@@ -45,7 +45,7 @@ loop:
   ; loop if the counter hasn't yet reached the end  
   bne R1 R2 R3  
   ; end program  
-  halt  
+  halt  '''
 
 ## How to setup and use
 
