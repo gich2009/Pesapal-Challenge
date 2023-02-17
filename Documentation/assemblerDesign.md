@@ -53,3 +53,52 @@ Additional rules:
 15. If any non-key word is encountered in a statement in the code:  
     i. If it has a ‘:’ character to signify an identifier tail, then check the identifier map to ascertain that it is an identifier, else throw an invalid statement exception.  
     ii. If it does not have a ‘:’ character, then throw an invalid statement exception.If any non-key word is encountered in a statement in the code:  
+
+Example Assembly Program
+------------------------
+01:	; a simple counter program.  
+02:	li R1 0x00000000  
+03:	; end  
+04:	li R2 0x0000FFFF  
+05:	; memory location of loop start  
+06:	li R3 loop  
+07:	loop:  
+08:	; store the contents of R1 at the location pointed by R1  
+09:	sw R1 R1  
+10:	; increment the counter  
+11:	inc R1  
+12:	; loop if the counter hasn't yet reached the end  
+13:	bne R1 R2 R3  
+14:  
+15:	; end program  
+16:	HALT  
+
+| Instruction                                   | Instruction part actioned | Absolute line count | Line count (Address) | Byte                  | Rule            |
+|-----------------------------------------------|---------------------------|---------------------|----------------------|-----------------------|----------------|
+| ; a simple counter program.                   | Ignored                   | 1                   | Invalid              | Not Applicable        | #2             |
+|                                               |                           |                     |                      |                       |                |
+| li R1 0x00000000                              |                           |                     |                      |                       |                |
+| First byte                                    | Li R1                     | 2                   | 0                    | 0001 (R1) + 0010 (li) | #11 & #13      |
+| Second byte                                   | Don’t care (Xs)           | 2                   | 0                    | 0000 + 0000           | #7             |
+| Third byte                                    | Immediate value low byte:  | 2                   | 0                    | 0000 + 0000           | #12            |
+|                                               | 0x00                      |                     |                      |                       |                |
+| Fourth byte                                   | Immediate value high byte: | 2                   | 0                    | 0000 + 0000           | #12            |
+|                                               | 0x00                      |                     |                      |                       |                |
+|                                               |                           |                     |                      |                       |                |
+| ; end                                         | Ignored                   | 3                   | 0                    | Not Applicable        | #2             |
+|                                               |                           |                     |                      |                       |                |
+| li R2 0x0000FFFF                              |                           |                     |                      |                       |                |
+| First byte                                    | Li R2                     | 4                   | 1                    | 0010 (R2) + 0010 (li) | #11 & #13      |
+| Second byte                                   | Don’t care (Xs)           | 4                   | 1                    | 0000 + 0000           | #7             |
+| Third byte                                    | Immediate value low byte:  | 4                   | 1                    | 1111 + 1111           | #12            |
+|                                               | 0xFF                      |                     |                      |                       |                |
+| Fourth byte                                   | Immediate value high byte: | 4                   | 1                    | 1111 + 1111           | #12            |
+|                                               | 0xFF                      |                     |                      |                       |                |
+|                                               |                           |                     |                      |                       |                |
+| ; memory location of loop start               | Ignored                   | 5                   | 1                    | Not Applicable        | #2             |
+|                                               |                           |                     |                      |                       |                |
+| li R3 loop                                    |                           |                     |                      |                       |                |
+| First byte                                    | Li R3                     | 6                   | 2                    | 0011 (R3) + 0010 (li) | #11 & #13      |
+| Second byte                                   | Don’t care (Xs)           | 6                   | 2                    | 0000 + 0000           | #7             |
+| Third byte                                    | Immediate value given as an identifier (low byte) | 6 | 2 | 0000 + 0100 | #4, #6, #13   |
+| Fourth byte                                   | Immediate value given as an identifier (high byte) | 6 | 2 | 0000 + 0000 | #4, #6, #14
