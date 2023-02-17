@@ -1,0 +1,20 @@
+; a simple counter program.
+
+;begin
+li r1 0x00000000
+
+;end
+li r2 0X00000004
+
+;memory location of loop start
+li r3 loop
+loop:
+  ; store the contents of r1 at the memory location pointed by r1
+  sw r1 r1
+  ; increment the counter
+  inc r1
+  ;loop if the counter hasn't yet reached the end
+  bne r1 r2 r3
+  ;end program
+  halt
+
