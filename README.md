@@ -90,7 +90,7 @@ For now, the application can only work for windows systems because of file manag
 4. Go to the simulator folder and run simulator.exe. It will prompt you for the name of the .binary.txt file you would like to simulate. Once you enter the file, wait for execution.
 
 
-NOTE: testBench programs have been provided in the .txt directory for users who prefer not to write any assembly code. Use the testBenches to try out the functionality.
+NOTE: testBench assembly programs have been provided in the .txt sub-folder for users who prefer not to write any assembly code. Use the testBenches to try out the functionality. The testBench binary files in the .binary.txt file may also be loaded into the simulator or deleted since they can be regenerated from their source files in the .txt sub-folder.
 
 
 #Shortcomings
