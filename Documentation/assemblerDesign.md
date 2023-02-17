@@ -50,7 +50,6 @@ Additional rules:
 
 14. If the immediate address is an identifier, add the new identifier to a map that keeps track of all the identifiers of the program together with its address which is given as the address (line count) of the current statement +2. This is because the next statement (+1) is syntactically guaranteed to be non-actionable since it will mark the beginning of the identifier using the syntax “identifier_name: ”
 
-15. If any non-key word is encountered in a statement in the code:
-    i. If it has a ‘:’ character to signify an identifier tail, then check the identifier map to ascertain that it is an identifier, else throw an invalid statement exception.
-    ii. If it does not have a ‘:’ character, then throw an invalid statement exception.If any non-key word is encountered in a statement in the code:
-  * If it has a ‘:’ character to signify an identifier tail,
+15. If any non-key word is encountered in a statement in the code:  
+    i. If it has a ‘:’ character to signify an identifier tail, then check the identifier map to ascertain that it is an identifier, else throw an invalid statement exception.  
+    ii. If it does not have a ‘:’ character, then throw an invalid statement exception.If any non-key word is encountered in a statement in the code:  
