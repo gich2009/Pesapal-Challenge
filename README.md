@@ -52,7 +52,7 @@ loop:
 
 For now, the application can only work for windows systems because of file management differences with other operating systems. Pretty funny since I'm writing this on Ubuntu but that's the irony of a developer's life!
 
-1. Download the Pesapal folder. 
+1. Download the ZIP file in the Pesapal-Challenge repository. 
 2. Write your assembly language code with the instruction set provided in a .txt file and save it in the .txt subfolder of the Pesapal folder. 
 3. Go to the assembler folder and run assembler.exe. It will prompt you for the name of your .txt assembly file e.g. "myAssembly.txt". Once it executes successfully, a binary file will be created in the .binary.txt folder titled "myAssembly.binary.txt". 
 4. Go to the simulator folder and run simulator.exe. It will prompt you for the name of the .binary.txt file you would like to simulate. Once you enter the file, wait for execution.
