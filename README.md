@@ -59,6 +59,8 @@ For now, the application can only work for windows systems because of file manag
 
 NOTE: Test bench assembly programs have been provided in the .txt sub-folder for users who prefer not to write any assembly code. Use the test bench files to try out the functionality. The test bench binary files in the .binary.txt folder may also be loaded into the simulator or deleted since they can be regenerated from their source files in the .txt sub-folder.
 
+While trying to run the .exe files, you may get a dialog box from windows 10 or windows 11 blocking the execution with a "Windows protected your PC prompt." Click on more info and select 'run anyway.'
+
 ## Shortcomings
 
 The exception handlers for the application have not been completed so crashes may occur when unexpected input is given.
