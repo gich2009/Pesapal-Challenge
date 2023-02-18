@@ -8,7 +8,7 @@ The assembler should:
 2. Discard any lines starting with the comment character ‘;’.
 3. Ignore leading white space characters.
 4. Replace any identifiers with their addresses as immediate values and store the identifiers in a map for future reference.
-5. Keep track of both the absolute line count which is the line number of the .txt document the assembler is currently compiling.
+5. Keep track of the absolute line count which is the line number of the .txt document the assembler is currently compiling.
 6. Keep track of the line count which is the line number of the .txt document the assembler is currently compiling ignoring the empty lines and the comment lines. This line count represents the address of an instruction.
 7. Encode ‘don’t care’ bits as 0s.
 8. Put each encoded byte on a separate line in little-endian, that is, from low byte to high byte.
@@ -52,7 +52,7 @@ Additional rules:
 
 15. If any non-key word is encountered in a statement in the code:  
     i. If it has a ‘:’ character to signify an identifier tail, then check the identifier map to ascertain that it is an identifier, else throw an invalid statement exception.  
-    ii. If it does not have a ‘:’ character, then throw an invalid statement exception.If any non-key word is encountered in a statement in the code:  
+    ii. If it does not have a ‘:’ character, then throw an invalid statement exception.  
 
 Example Assembly Program
 ------------------------
