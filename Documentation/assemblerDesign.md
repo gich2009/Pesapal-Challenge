@@ -46,7 +46,7 @@ Additional rules:
 | beq         | 0xB                | 1011                  |
 | bne         | 0xC                | 1100                  |
 | inc         | 0xD                | 1101                  |
-| dec         | 0xE                | 1100                  |
+| dec         | 0xE                | 1110                  |
 
 14. If the immediate address is an identifier, add the new identifier to a map that keeps track of all the identifiers of the program together with its address which is given as the address (line count) of the current statement +2. This is because the next statement (+1) is syntactically guaranteed to be non-actionable since it will mark the beginning of the identifier using the syntax “identifier_name: ”
 
@@ -150,4 +150,4 @@ Example Assembly Program
 | Third byte                                                  | Don’t care (Xs)| 16         | 7       | 0000+0000        | #7           |
 | Fourth byte                                                 | Don’t care (Xs)| 16         | 7       | 0000+0000        | #7           |
 
-NOTE: Tbe program uses a variable `absolute line count` to keep track of the line count as referred to by the table above and a variable `line count` to keep track of the address as referred by the table above. A future update will refactor the code so that the identifiers are not closely named.
+NOTE: The program uses a variable `absolute line count` to keep track of the line count as referred to by the table above and a variable `line count` to keep track of the address as referred by the table above. A future update will refactor the code so that the identifiers are not closely named.
