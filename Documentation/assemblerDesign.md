@@ -155,7 +155,7 @@ NOTE: Tbe program uses a variable `absolute line count` to keep track of the lin
       ┌────────────────┐
       │  OPCODE FIELD  │
       └────────────────┘
-     /  |   \
+     /          |                       \
 ┌─────────┐  ┌───────────┐      ┌──────────────────┐
 │  RETURN │  │ IMMEDIATE │      │ ADDRESS FIELD 1  │
 │ 1. halt │  │           │      │                  │
