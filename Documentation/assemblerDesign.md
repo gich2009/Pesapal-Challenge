@@ -77,13 +77,16 @@ Example Assembly Program
 | --------------------------------------------------------| -------------- | ---------- | ------- | ---------------- | ------------ |
 | ; a simple counter program.                             | Ignored        | 1          | Invalid | Not Applicable   | #2           |
 |                                                         |                |            |         |                  |              |
+|                                                         |                |            |         |                  |              |
 | li R1 0x00000000                                        |                |            |         |                  |              |
 | First byte                                              | Li R1          | 2          | 0       | 0001+0010        | #11 & #13    |
 | Second byte                                             | Don’t care (Xs)| 2          | 0       | 0000+0000        | #7           |
 | Third byte                                              | 0x00           | 2          | 0       | 0000+0000        | #12          |
 | Fourth byte                                             | 0x00           | 2          | 0       | 0000+0000        | #12          |
 |                                                         |                |            |         |                  |              |
+|                                                         |                |            |         |                  |              |
 | ; end                                                   | Ignored        | 3          | 0       | Not Applicable   | #2           |
+|                                                         |                |            |         |                  |              |
 |                                                         |                |            |         |                  |              |
 | li R2 0x0000FFFF                                        |                |            |         |                  |              |
 | First byte                                              | Li R2          | 4          | 1       | 0010+0010        | #11 & #13    |
@@ -91,7 +94,9 @@ Example Assembly Program
 | Third byte                                              | 0xFF           | 4          | 1       | 1111+1111        | #12          |
 | Fourth byte                                             | 0xFF           | 4          | 1       | 1111+1111        | #12          |
 |                                                         |                |            |         |                  |              |
+|                                                         |                |            |         |                  |              |
 | ; memory location of loop start                         | Ignored        | 5          | 1       | Not Applicable   | #2           |
+|                                                         |                |            |         |                  |              |
 |                                                         |                |            |         |                  |              |
 | li R3 loop                                              |                |            |         |                  |              |
 | First byte                                              | Li R3          | 6          | 2       | 0011+0010        | #11 & #13    |
@@ -99,9 +104,12 @@ Example Assembly Program
 | Third byte                                              | loop (low byte)| 6          | 2       | 0000+0100        | #4, #6, #13  |
 | Fourth byte                                             | loop (high byte)| 6         | 2       | 0000+0000        | #4, #6, #14  |
 |                                                         |                |            |         |                  |              |
+|                                                         |                |            |         |                  |              |
 | loop:                                                   |Check if in map | 7          | 3       | No mapping       | #15          |
 |                                                         |                |            |         |                  |              |
+|                                                         |                |            |         |                  |              |
 |; store the contents of R1 at the location pointed by R1 | Ignored        | 8          | 3       | Not Applicable   | #2           |
+|                                                         |                |            |         |                  |              |
 |                                                         |                |            |         |                  |              |
 | sw R1 R1                                                |                |            |         |                  |              |
 | First Byte                                              | sw R1          | 9          | 4       | 0011+0100        | #11 & #13    |
@@ -109,7 +117,9 @@ Example Assembly Program
 | Third byte                                              | Don’t care (Xs)| 9          | 4       | 0000+0000        | #7           |
 | Fourth byte                                             | Don’t care (Xs)| 9          | 4       | 0000+0000        | #7           |
 |                                                         |                |            |         |                  |              |
+|                                                         |                |            |         |                  |              |
 |; increment the counter                                  | Ignored        | 10         | 4       | Not Applicable   | #2           |
+|                                                         |                |            |         |                  |              |
 |                                                         |                |            |         |                  |              |
 | inc R1                                                  |                |            |         |                  |              |
 | First byte                                              | inc R1         | 11         | 5       | 0001+1101        | #11 & #13    |
@@ -117,7 +127,9 @@ Example Assembly Program
 | Third byte                                              | Don’t care (Xs)| 11         | 5       | 0000+0000        | #7           |
 | Fourth byte                                             | Don’t care (Xs)| 11         | 5       | 0000+0000        | #7           |
 |                                                         |                |            |         |                  |              |
+|                                                         |                |            |         |                  |              |
 |; loop if the counter hasn't yet reached the end         | Ignored        | 12         | 5       | Not Applicable   | #2           |
+|                                                         |                |            |         |                  |              |
 |                                                         |                |            |         |                  |              |
 | bne R1 R2 R3                                            |                |            |         |                  |              |
 | First byte                                              | bne R1         | 13         | 6       | 0001+1100        | #11 & #13    |
@@ -125,9 +137,12 @@ Example Assembly Program
 | Third byte                                              | Don’t care (Xs)| 13         | 6       | 0000+0000        | #7           |
 | Fourth byte                                             | Don’t care (Xs)| 13         | 6       | 0000+0000        | #7           |
 |                                                         |                |            |         |                  |              |
+|                                                         |                |            |         |                  |              |
 |                                                         | Empty line     | 14         | 6       | Not Applicable   | #1           |
 |                                                         |                |            |         |                  |              |
+|                                                         |                |            |         |                  |              |
 |; end program                                            | Ignored        | 15         | 6       | Not Applicable   | #2           |
+|                                                         |                |            |         |                  |              |
 |                                                         |                |            |         |                  |              |
 | HALT                                                    |                |            |         |                  |              |
 | First byte                                              | HALT           | 16         | 7       | 0000+0010        | #9, #13      |
