@@ -145,7 +145,7 @@ Example Assembly Program
 |                                                             |                |            |         |                  |              |
 |                                                             |                |            |         |                  |              |
 | **HALT**                                                    |                |            |         |                  |              |
-| First byte                                                  | HALT           | 16         | 7       | 0000+0010        | #9, #13      |
+| First byte                                                  | HALT           | 16         | 7       | 0000+0000        | #9, #13      |
 | Second byte                                                 | Don’t care (Xs)| 16         | 7       | 0000+0000        | #7           |
 | Third byte                                                  | Don’t care (Xs)| 16         | 7       | 0000+0000        | #7           |
 | Fourth byte                                                 | Don’t care (Xs)| 16         | 7       | 0000+0000        | #7           |
