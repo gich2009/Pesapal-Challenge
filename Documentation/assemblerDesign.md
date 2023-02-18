@@ -146,6 +146,8 @@ Example Assembly Program
 |                                                             |                |            |         |                  |              |
 | **HALT**                                                    |                |            |         |                  |              |
 | First byte                                                  | HALT           | 16         | 7       | 0000+0010        | #9, #13      |
-| Second byte                                                 | Don’t care (Xs)| 7          | 3       | 0000+0000        | #7           |
-| Third byte                                                  | Don’t care (Xs)| 7          | 3       | 0000+0000        | #7           |
-| Fourth byte                                                 | Don’t care (Xs)| 7          | 3       | 0000+0000        | #7           |
+| Second byte                                                 | Don’t care (Xs)| 16         | 7       | 0000+0000        | #7           |
+| Third byte                                                  | Don’t care (Xs)| 16         | 7       | 0000+0000        | #7           |
+| Fourth byte                                                 | Don’t care (Xs)| 16         | 7       | 0000+0000        | #7           |
+
+NOTE: Tbe program uses a variable `absolute line count` to keep track of the line count as referred to by the table above and a variable `line count` to keep track of the address as referred by the table above. A future update will refactor the code so that the identifiers are not closely named.
