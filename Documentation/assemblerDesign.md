@@ -73,7 +73,7 @@ Example Assembly Program
 15:	; end program  
 16:	HALT  
 
-| Instruction                                                 | Part Actioned  | Line Count | Address | Byte             | Rule         |
+| Instruction                                                 | Part Actioned  | Line Count | Address | Byte (High + low)| Rule         |
 | ------------------------------------------------------------| -------------- | ---------- | ------- | ---------------- | ------------ |
 | **; a simple counter program.**                             | Ignored        | 1          | Invalid | Not Applicable   | #2           |
 |                                                             |                |            |         |                  |              |
