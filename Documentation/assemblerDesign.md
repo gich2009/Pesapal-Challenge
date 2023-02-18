@@ -151,3 +151,19 @@ Example Assembly Program
 | Fourth byte                                                 | Don’t care (Xs)| 16         | 7       | 0000+0000        | #7           |
 
 NOTE: Tbe program uses a variable `absolute line count` to keep track of the line count as referred to by the table above and a variable `line count` to keep track of the address as referred by the table above. A future update will refactor the code so that the identifiers are not closely named.
+
+      ┌────────────────┐
+      │  OPCODE FIELD  │
+      └────────────────┘
+     /  |   \
+┌─────────┐  ┌───────────┐      ┌──────────────────┐
+│  RETURN │  │ IMMEDIATE │      │ ADDRESS FIELD 1  │
+│ 1. halt │  │           │      │                  │
+│ 2. nop  │  │           │      │                  │
+│         │  │           │      │                  │
+└─────────┘  └───────────┘      └──────────────┬───┘
+                  /                         / | \
+                ┌──────────┐               5  6  7
+                │  RETURN  │    
+                │    j     │   
+                └──────────┘
